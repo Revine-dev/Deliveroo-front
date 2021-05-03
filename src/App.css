@@ -1,1 +1,210 @@
 /* Other rules */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.fullscreen {
+  background: lightgray;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid #e9ebeb;
+}
+
+header svg,
+header img {
+  max-width: 150px;
+}
+
+.loading {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.restaurant {
+  padding: 30px 0;
+  display: flex;
+}
+
+.restaurant .infos {
+  flex: 1 1;
+  margin-right: 30px;
+}
+
+.restaurant .infos .name {
+  font-size: 2rem;
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.restaurant .infos p {
+  color: #868a8a;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.restaurant img {
+  width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f3f5f5;
+}
+
+.content {
+  background: #f3f5f5;
+}
+
+.pick {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pick .menu {
+  flex: 1 1;
+  margin-right: 30px;
+}
+
+.pick .cart-content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.pick .cart {
+  margin-top: 20px;
+  width: 350px;
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.pick .cart button {
+  display: block;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 1rem;
+  background: #00cdbd;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.pick .cart button:disabled {
+  cursor: not-allowed;
+  background: #bac3c3;
+  color: #8b9a9b;
+}
+
+.pick .cart .empty {
+  color: #868a8a;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.pick .category .meals {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.pick .category .category-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.pick .category .meals .card {
+  width: 50%;
+  min-width: 300px;
+  padding: 0 10px 25px;
+}
+
+.pick .category .meals .card .meal {
+  border-radius: 5px;
+  height: 160px;
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.pick .category .meals .card .meal .infos {
+  flex: 1 1;
+  margin-right: 15px;
+}
+
+.pick .category .meals .card .meal:hover {
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+}
+
+.pick .category .meals .card .meal .name {
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+}
+
+.pick .category .meals .card .meal .description {
+  font-size: 0.9rem;
+  color: #808484;
+  line-height: 1.3rem;
+  height: 2.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 1rem;
+}
+
+.pick .category .meals .card .meal .picture {
+  height: 130px;
+  width: 130px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+}
+
+.pick .category .meals .card .meal .price {
+  display: flex;
+  align-items: center;
+}
+
+.pick .category .meals .card .meal .popular {
+  color: #ff8000;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
