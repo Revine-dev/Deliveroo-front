@@ -17,7 +17,7 @@ const Items = (props) => {
   };
 
   const formatPrice = (price) => {
-    return price.toFixed(2).toLocaleString().replace(/\./, ",");
+    return price.toFixed(2).toLocaleString().replace(/\./, ",") + " €";
   };
 
   return (
