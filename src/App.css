@@ -1,5 +1,11 @@
 /* Other rules */
 
+:root {
+  --gren: #00ccbc;
+  --darkgreen: #00c2b3;
+  --lightgray: #e9ebeb;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -24,12 +30,19 @@ body {
 
 header {
   padding: 10px;
-  border-bottom: 1px solid #e9ebeb;
+  border-bottom: 1px solid var(--lightgray);
 }
 
 header svg,
 header img {
   max-width: 150px;
+}
+button {
+  transition: all 0.2s;
+}
+
+button:not(:disabled):hover {
+  background: var(--darkgreen) !important;
 }
 
 .loading {
@@ -105,7 +118,7 @@ header img {
   margin: 10px;
   border-radius: 5px;
   padding: 1rem;
-  background: #00cdbd;
+  background: var(--gren);
   color: #fff;
   border: none;
   font-weight: 700;
@@ -117,12 +130,6 @@ header img {
   cursor: not-allowed;
   background: #bac3c3;
   color: #8b9a9b;
-}
-
-.pick .cart .empty {
-  color: #868a8a;
-  text-align: center;
-  padding: 3rem 0;
 }
 
 .pick .category .meals {
@@ -207,4 +214,81 @@ header img {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.pick .cart .empty {
+  color: #868a8a;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.pick .cart .items {
+  margin: 10px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.pick .cart > *:not(.items, button, .empty) {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pick .cart .subtotal {
+  border-top: 1px solid var(--lightgray);
+}
+
+.pick .cart .total {
+  border-top: 1px solid var(--lightgray);
+  font-weight: bold;
+}
+
+.pick .cart .items .item {
+  display: flex;
+  width: 100%;
+}
+
+.pick .cart .items .item + .item {
+  margin-top: 10px;
+}
+
+.pick .cart .items .item .quantity {
+  display: flex;
+  width: 20%;
+}
+
+.pick .cart .quantity button {
+  background: transparent;
+  border: 1px solid var(--gren);
+  color: var(--gren);
+  margin: 0;
+  padding: 0 5px 2px 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+  height: 23px;
+}
+
+.pick .cart .quantity button:hover {
+  color: white;
+}
+
+.pick .cart .quantity .nb {
+  margin-right: 5px;
+  line-height: 1.5;
+}
+
+.pick .cart .items .item .name {
+  width: 60%;
+  margin-left: 5px;
+  line-height: 1.5;
+}
+
+.pick .cart .items .item .price {
+  line-height: 1.5;
+  width: 20%;
+  text-align: right;
 }

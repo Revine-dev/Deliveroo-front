@@ -5,9 +5,11 @@ import axios from "axios";
 import Header from "./Header";
 import Restaurant from "./Restaurant";
 import Category from "./Category";
+import Cart from "./Cart";
 
 function App() {
-  const [data, setData] = useState({});
+  const [foodData, setFoodData] = useState({});
+  const [cart, setCart] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -15,7 +17,7 @@ function App() {
       const response = await axios.get(
         "https://backend-deliveroo-revine.herokuapp.com/"
       );
-      setData(response.data);
+      setFoodData(response.data);
       setIsLoading(false);
     };
     fetchData();
@@ -29,21 +31,25 @@ function App() {
           <div className="container loading">En cours de chargement... </div>
         ) : (
           <>
-            <Restaurant {...data} />
+            <Restaurant {...foodData} />
             <section className="content">
               <div className="container pick">
                 <div className="menu">
-                  {data.categories
+                  {foodData.categories
                     .filter((filter) => filter.meals.length > 0)
                     .map((category, i) => {
-                      return <Category {...category} key={i} />;
+                      return (
+                        <Category
+                          {...category}
+                          key={i}
+                          setCart={setCart}
+                          cart={cart}
+                        />
+                      );
                     })}
                 </div>
                 <div className="cart-content">
-                  <div className="cart">
-                    <button disabled>Valider mon panier</button>
-                    <div className="empty">Votre panier est vide</div>
-                  </div>
+                  <Cart setCart={setCart} data={cart} />
                 </div>
               </div>
             </section>

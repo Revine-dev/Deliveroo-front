@@ -6,7 +6,14 @@ const Category = (props) => {
       <h2 className="category-name">{props.name}</h2>
       <div className="meals">
         {props.meals.map((meal) => {
-          return <Meal {...meal} key={meal.id} />;
+          return (
+            <Meal
+              {...meal}
+              key={meal.id}
+              setCart={props.setCart}
+              cart={props.cart}
+            />
+          );
         })}
       </div>
     </div>
