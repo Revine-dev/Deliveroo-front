@@ -205,8 +205,19 @@ button:not(:disabled):hover {
   flex-direction: row;
   align-items: flex-start;
   cursor: pointer;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+}
+
+.pick .category .meals .card .meal:active {
+  animation: bgAnimate 0.1s ease-in-out;
+}
+
+@keyframes bgAnimate {
+  from {
+    background: inherit;
+  }
+  to {
+    background: var(--gren);
+  }
 }
 
 .pick .category .meals .card .meal .infos {

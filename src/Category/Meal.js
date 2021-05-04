@@ -44,7 +44,11 @@ const Meal = (props) => {
           </div>
         </div>
         {props.picture && (
-          <img src={props.picture} alt="Meal cover" className="picture" />
+          <img
+            src={`${props.picture}?width=130&height=130&auto=webp&format=jpg&fit=crop`}
+            alt="Meal cover"
+            className="picture"
+          />
         )}
       </div>
     </div>

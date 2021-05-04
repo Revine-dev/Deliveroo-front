@@ -5,7 +5,10 @@ const Restaurant = (props) => {
         <h1 className="name">{props.restaurant.name}</h1>
         <p>{props.restaurant.description}</p>
       </div>
-      <img src={props.restaurant.picture} alt="Restaurant cover" />
+      <img
+        src={`${props.restaurant.picture}?width=300&height=300&auto=webp&format=jpg&fit=crop`}
+        alt="Restaurant cover"
+      />
     </section>
   );
 };
