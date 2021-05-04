@@ -1,0 +1,47 @@
+@media (max-width: 1048px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .pick .category .meals .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .go-cart {
+    display: block;
+  }
+  .pick,
+  .restaurant {
+    flex-direction: column;
+  }
+  .restaurant img {
+    align-self: center;
+    margin-top: 20px;
+  }
+  .pick .cart-content {
+    order: -1;
+    position: relative;
+  }
+  .pick .cart-content,
+  .pick .cart {
+    width: 100%;
+  }
+  .pick .menu {
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pick .category .meals .card .meal {
+    flex-direction: column;
+  }
+  .pick .category .meals .card .meal .picture {
+    margin-top: 15px;
+  }
+  .pick .category .meals .card .meal {
+    height: 180px;
+  }
+}

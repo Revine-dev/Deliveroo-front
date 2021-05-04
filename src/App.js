@@ -1,4 +1,5 @@
 import "./App.css";
+import "./responsive.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
@@ -56,6 +57,13 @@ function App() {
           </>
         )}
       </main>
+      <a className="go-cart" href="#cart">
+        <div>Voir mon panier</div>
+
+        <div className={`nb ${cart.length === 0 && "empty"}`}>
+          {cart.map((item) => 1 * item.quantity).reduce((a, b) => a + b, 0)}
+        </div>
+      </a>
     </>
   );
 }

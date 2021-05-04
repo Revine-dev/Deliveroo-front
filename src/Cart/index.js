@@ -15,7 +15,7 @@ const Cart = (props) => {
   };
 
   return (
-    <div className="cart">
+    <div className="cart" id="cart">
       <button {...disabled}>Valider mon panier</button>
       {props.data.length > 0 ? (
         <>
