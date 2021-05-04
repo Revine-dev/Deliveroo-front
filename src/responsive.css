@@ -16,6 +16,9 @@
   .restaurant {
     flex-direction: column;
   }
+  .restaurant .infos {
+    text-align: center;
+  }
   .restaurant img {
     align-self: center;
     margin-top: 20px;
