@@ -1,7 +1,6 @@
 import "./App.css";
 import "./responsive.css";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./Header";
 import Restaurant from "./Restaurant";
@@ -16,7 +15,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://backend-deliveroo-revine.herokuapp.com/"
+        "https://deliveroo-revine.onrender.com/"
       );
       setFoodData(response.data);
       setIsLoading(false);
